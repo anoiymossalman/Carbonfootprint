@@ -381,28 +381,41 @@
             <button type="button" onclick="calculateFootprint()">Calculate</button>
         </form>
         
-        <h3>Your Ecological Footprint: <span id="result">0</span> points</h3>
+       <h3>Your Ecological Footprint: <span id="result">0</span> points</h3>
+<h3>Hectares Required: <span id="hectares">0</span> ha</h3>
+<h3>Earths Needed: <span id="earths">0</span></h3>
+
+        
     </div>
-    <script>
+   <script>
     function calculateFootprint() {
         let totalFootprint = 0;
 
-        // Collect values from select elements
-        let selects = document.querySelectorAll('select');
-        selects.forEach(select => {
-            totalFootprint += parseInt(select.value);
+        // Get values from dropdowns
+        let dropdowns = document.querySelectorAll("select");
+        dropdowns.forEach(dropdown => {
+            totalFootprint += parseInt(dropdown.value);
         });
 
-        // Collect values from checked checkboxes
-        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        // Get values from checkboxes
+        let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
         checkboxes.forEach(checkbox => {
             totalFootprint += parseInt(checkbox.value);
         });
 
-        // Display result
+        // Convert footprint to hectares
+        let hectares = (totalFootprint / 100).toFixed(2);
+        
+        // Convert footprint to Earths needed
+        let earthsNeeded = (hectares / 1.9).toFixed(2);
+
+        // Display results
         document.getElementById('result').innerText = totalFootprint;
+        document.getElementById('hectares').innerText = hectares;
+        document.getElementById('earths').innerText = earthsNeeded;
     }
 </script>
+
 
 </body>
 </html>
