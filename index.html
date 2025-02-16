@@ -84,6 +84,299 @@
     <option value="50">Yes</option>
     <option value="0">No</option>
 </select>
+            <h3>Food Consumption</h3>
+
+<label>On a typical day, I eat (select any that apply):</label>
+<div>
+    <input type="checkbox" id="beef" value="150"> Beef (150/portion)<br>
+    <input type="checkbox" id="chicken" value="100"> Chicken (100/portion)<br>
+    <input type="checkbox" id="farmedFish" value="80"> Farmed fish (80/portion)<br>
+    <input type="checkbox" id="wildFish" value="40"> Wild fish (40/portion)<br>
+    <input type="checkbox" id="eggs" value="40"> Eggs (40/portion)<br>
+    <input type="checkbox" id="milkDairy" value="40"> Milk/dairy (40/portion)<br>
+    <input type="checkbox" id="fruit" value="20"> Fruit (20/portion)<br>
+    <input type="checkbox" id="vegetables" value="20"> Vegetables (20/portion)<br>
+    <input type="checkbox" id="grains" value="20"> Grains: bread, cereal, rice (20/portion)<br>
+</div>
+
+<label>____ of my food is grown locally:</label>
+<select id="localFood">
+    <option value="0">All</option>
+    <option value="30">Some</option>
+    <option value="60">None</option>
+</select>
+
+<label>____ of my food is organic:</label>
+<select id="organicFood">
+    <option value="0">All</option>
+    <option value="30">Some</option>
+    <option value="60">None</option>
+</select>
+
+<label>I compost my fruit/vegetable scraps and peels:</label>
+<select id="compost">
+    <option value="-20">Yes</option>
+    <option value="60">No</option>
+</select>
+
+<label>____ of my food is processed:</label>
+<select id="processedFood">
+    <option value="100">All</option>
+    <option value="30">Some</option>
+    <option value="0">None</option>
+</select>
+
+<label>____ of my food has packaging:</label>
+<select id="foodPackaging">
+    <option value="100">All</option>
+    <option value="30">Some</option>
+    <option value="0">None</option>
+</select>
+
+<label>On a typical day, I waste:</label>
+<select id="foodWaste">
+    <option value="0">None of my food</option>
+    <option value="100">One fourth of my food</option>
+    <option value="150">One third of my food</option>
+    <option value="200">Half of my food</option>
+</select>
+            <h3>Transportation</h3>
+
+<label>On a typical day, I travel by:</label>
+<select id="travelMethod">
+    <option value="0">Foot</option>
+    <option value="5">Bike (5 per use)</option>
+    <option value="30">Public transport (30 per use)</option>
+    <option value="200">Private vehicle (200 per use)</option>
+</select>
+
+<label>Our vehicle’s fuel efficiency is ____ litres/100 kilometres:</label>
+<select id="fuelEfficiency">
+    <option value="-50">Less than 6 litres</option>
+    <option value="50">6-9 litres</option>
+    <option value="100">10-13 litres</option>
+    <option value="200">More than 13 litres</option>
+</select>
+
+<label>The time I spend in vehicles on a typical day is:</label>
+<select id="vehicleTime">
+    <option value="0">No time</option>
+    <option value="40">Less than half an hour</option>
+    <option value="60">Half an hour to 1 hour</option>
+    <option value="100">More than 1 hour</option>
+</select>
+
+<label>How big is the car in which I travel on a typical day?</label>
+<select id="carSize">
+    <option value="-20">No car</option>
+    <option value="50">Small</option>
+    <option value="100">Medium</option>
+    <option value="200">Large (SUV)</option>
+</select>
+
+<label>How many cars are there in our driveway?</label>
+<select id="numCars">
+    <option value="-20">No car</option>
+    <option value="50">1 car</option>
+    <option value="100">2 cars</option>
+    <option value="200">More than 2 cars</option>
+</select>
+
+<label>On a typical day, I walk/run for:</label>
+<select id="walkRunTime">
+    <option value="-75">5 hours or more</option>
+    <option value="-25">3 to 5 hours</option>
+    <option value="0">1 to 3 hours</option>
+    <option value="10">Half an hour to 1 hour</option>
+    <option value="100">Less than 10 minutes</option>
+</select>
+<h3>Housing</h3>
+
+<label>Number of rooms per person (divide number of rooms by number of people living at home):</label>
+<select id="roomsPerPerson">
+    <option value="10">Fewer than 2 rooms per person</option>
+    <option value="80">2 to 3 rooms per person</option>
+    <option value="140">4 to 6 rooms per person</option>
+    <option value="200">7 or more rooms per person</option>
+</select>
+
+<label>We share our home with non-family members:</label>
+<select id="sharedHome">
+    <option value="-50">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>We own a second, or holiday home that is often empty:</label>
+<select id="secondHome">
+    <option value="0">No</option>
+    <option value="200">We own/use it with others</option>
+    <option value="400">Yes</option>
+</select>
+<h3>Energy Use</h3>
+
+<label>In cold months, our house temperature is:</label>
+<select id="houseTemp">
+    <option value="-20">Under 15° C</option>
+    <option value="50">15-18° C</option>
+    <option value="100">19-22° C</option>
+    <option value="150">22° C or more</option>
+</select>
+
+<label>We dry clothes outdoors or on an indoor rack:</label>
+<select id="dryClothes">
+    <option value="-50">Always</option>
+    <option value="20">Sometimes</option>
+    <option value="60">Never</option>
+</select>
+
+<label>We use an energy-efficient refrigerator:</label>
+<select id="efficientFridge">
+    <option value="-50">Yes</option>
+    <option value="50">No</option>
+</select>
+
+<label>We use compact fluorescent light bulbs:</label>
+<select id="lightBulbs">
+    <option value="-50">Yes</option>
+    <option value="50">No</option>
+</select>
+
+<label>I turn off lights, computer, and television when they are not in use:</label>
+<select id="turnOffElectronics">
+    <option value="0">Yes</option>
+    <option value="50">No</option>
+</select>
+
+<label>To cool off, I use:</label>
+<select id="coolingMethod">
+    <option value="30">Air conditioning: car/home (30 for each)</option>
+    <option value="-10">Electric fan</option>
+    <option value="-50">Nothing</option>
+</select>
+
+<label>Outdoors today, I spent:</label>
+<select id="outdoorTime">
+    <option value="0">7 hours</option>
+    <option value="10">4 to 6 hours</option>
+    <option value="20">2 to 3 hours</option>
+    <option value="100">2 hours or less</option>
+</select>
+<h3>Clothing Habits</h3>
+
+<label>I change my outfit every day and put it in the laundry:</label>
+<select id="changeOutfit">
+    <option value="80">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I am wearing clothes that have been mended or fixed:</label>
+<select id="mendedClothes">
+    <option value="-20">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>One fourth of my clothes are handmade or second-hand:</label>
+<select id="secondHandClothes">
+    <option value="-20">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>Most of my clothes are purchased new each year:</label>
+<select id="newClothesEachYear">
+    <option value="120">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I give the local charity shop clothes that I no longer wear:</label>
+<select id="charityClothes">
+    <option value="0">Yes</option>
+    <option value="100">No</option>
+</select>
+
+<label>I buy hemp instead of cotton shirts when I can:</label>
+<select id="hempShirts">
+    <option value="-10">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I never wear ___ % of the clothes in my cupboard:</label>
+<select id="unusedClothes">
+    <option value="25">Less than 25%</option>
+    <option value="50">50%</option>
+    <option value="75">75%</option>
+    <option value="100">More than 75%</option>
+</select>
+
+<label>I have ____ pairs of shoes:</label>
+<select id="numberOfShoes">
+    <option value="20">2 to 3</option>
+    <option value="60">4 to 6</option>
+    <option value="90">7 or more</option>
+</select>
+<h3>Waste and Recycling</h3>
+
+<label>All my rubbish from today could fit into a:</label>
+<select id="dailyRubbish">
+    <option value="20">Shoebox</option>
+    <option value="60">Large bucket</option>
+    <option value="200">Garbage can</option>
+    <option value="-50">No rubbish created today!</option>
+</select>
+
+<label>I reuse items rather than throw them out:</label>
+<select id="reuseItems">
+    <option value="-20">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I repair items rather than throw them out:</label>
+<select id="repairItems">
+    <option value="-20">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I recycle all my paper, cans, glass, and plastic:</label>
+<select id="recycleItems">
+    <option value="-20">Yes</option>
+    <option value="0">No</option>
+</select>
+
+<label>I avoid disposable items as often as possible:</label>
+<select id="avoidDisposable">
+    <option value="-10">Yes</option>
+    <option value="60">No</option>
+</select>
+
+<label>I use rechargeable batteries whenever I can:</label>
+<select id="rechargeableBatteries">
+    <option value="-30">Yes</option>
+    <option value="0">No</option>
+</select>
+            <h3>Fun</h3>
+
+<label>In my locality, the land converted into fields, rinks, pools, gyms, ski slopes, car parks, etc. added together occupy:</label>
+<select id="landUse">
+    <option value="0">Nothing</option>
+    <option value="20">Less than 1 hectare</option>
+    <option value="60">1 to 2 hectares</option>
+    <option value="100">2 or more hectares</option>
+</select>
+
+<label>On a typical day, I use the TV or computer:</label>
+<select id="screenTime">
+    <option value="0">Not at all</option>
+    <option value="50">Less than 1 hour</option>
+    <option value="80">More than 1 hour</option>
+</select>
+
+<label>How much equipment is needed for typical activities?</label>
+<select id="activityEquipment">
+    <option value="0">None</option>
+    <option value="20">Very little</option>
+    <option value="60">Some</option>
+    <option value="80">A lot</option>
+</select>
+
             
             <button type="button" onclick="calculateFootprint()">Calculate</button>
         </form>
