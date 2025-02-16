@@ -48,6 +48,30 @@
                 <option value="90">10+ minutes</option>
             </select>
             
+            <label>Do you flush the toilet every time?</label>
+            <select id="flush">
+                <option value="40">Yes</option>
+                <option value="20">Sometimes</option>
+            </select>
+            
+            <label>Do you let the water run while brushing your teeth?</label>
+            <select id="teeth">
+                <option value="40">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+            <label>Did you wash a car or water the lawn today?</label>
+            <select id="carwash">
+                <option value="80">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
+            <label>Do you use water-saving toilets (6-9 litres/flush)?</label>
+            <select id="waterToilet">
+                <option value="-20">Yes</option>
+                <option value="0">No</option>
+            </select>
+            
             <label>Do you compost food scraps?</label>
             <select id="compost">
                 <option value="-20">Yes</option>
@@ -86,12 +110,16 @@
     <script>
         function calculateFootprint() {
             let shower = parseInt(document.getElementById('shower').value);
+            let flush = parseInt(document.getElementById('flush').value);
+            let teeth = parseInt(document.getElementById('teeth').value);
+            let carwash = parseInt(document.getElementById('carwash').value);
+            let waterToilet = parseInt(document.getElementById('waterToilet').value);
             let compost = parseInt(document.getElementById('compost').value);
             let transport = parseInt(document.getElementById('transport').value);
             let cars = parseInt(document.getElementById('cars').value);
             let organic = parseInt(document.getElementById('organic').value);
             
-            let totalFootprint = shower + compost + transport + cars + organic;
+            let totalFootprint = shower + flush + teeth + carwash + waterToilet + compost + transport + cars + organic;
             document.getElementById('result').innerText = totalFootprint;
         }
     </script>
