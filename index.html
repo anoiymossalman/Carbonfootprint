@@ -383,13 +383,26 @@
         
         <h3>Your Ecological Footprint: <span id="result">0</span> points</h3>
     </div>
-    
     <script>
-        function calculateFootprint() {
-            let categories = ['shower', 'flush', 'teeth', 'carwash', 'waterToilet', 'beef', 'chicken', 'localFood', 'organic', 'compost', 'transport', 'rooms', 'fridge', 'bulbs', 'lightsOff'];
-            let totalFootprint = categories.reduce((sum, id) => sum + parseInt(document.getElementById(id).value), 0);
-            document.getElementById('result').innerText = totalFootprint;
-        }
-    </script>
+    function calculateFootprint() {
+        let totalFootprint = 0;
+
+        // Collect values from select elements
+        let selects = document.querySelectorAll('select');
+        selects.forEach(select => {
+            totalFootprint += parseInt(select.value);
+        });
+
+        // Collect values from checked checkboxes
+        let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(checkbox => {
+            totalFootprint += parseInt(checkbox.value);
+        });
+
+        // Display result
+        document.getElementById('result').innerText = totalFootprint;
+    }
+</script>
+
 </body>
 </html>
