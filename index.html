@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        label, select, input {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Carbon Footprint Calculator</h2>
+        <form id="footprintForm">
+            <label>How long is your daily shower? (minutes)</label>
+            <select id="shower">
+                <option value="0">No shower</option>
+                <option value="50">1-2 minutes</option>
+                <option value="70">3-6 minutes</option>
+                <option value="90">10+ minutes</option>
+            </select>
+            
+            <label>Do you compost food scraps?</label>
+            <select id="compost">
+                <option value="-20">Yes</option>
+                <option value="60">No</option>
+            </select>
+            
+            <label>How do you usually travel?</label>
+            <select id="transport">
+                <option value="0">Walking</option>
+                <option value="5">Bicycle</option>
+                <option value="30">Public Transport</option>
+                <option value="200">Private Car</option>
+            </select>
+            
+            <label>How many cars are in your household?</label>
+            <select id="cars">
+                <option value="-20">No car</option>
+                <option value="50">1 car</option>
+                <option value="100">2 cars</option>
+                <option value="200">More than 2 cars</option>
+            </select>
+            
+            <label>How much of your food is organic?</label>
+            <select id="organic">
+                <option value="0">All</option>
+                <option value="30">Some</option>
+                <option value="60">None</option>
+            </select>
+            
+            <button type="button" onclick="calculateFootprint()">Calculate</button>
+        </form>
+        
+        <h3>Your Ecological Footprint: <span id="result">0</span> points</h3>
+    </div>
+    
+    <script>
+        function calculateFootprint() {
+            let shower = parseInt(document.getElementById('shower').value);
+            let compost = parseInt(document.getElementById('compost').value);
+            let transport = parseInt(document.getElementById('transport').value);
+            let cars = parseInt(document.getElementById('cars').value);
+            let organic = parseInt(document.getElementById('organic').value);
+            
+            let totalFootprint = shower + compost + transport + cars + organic;
+            document.getElementById('result').innerText = totalFootprint;
+        }
+    </script>
+</body>
+</html>
